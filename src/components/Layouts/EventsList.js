@@ -5,7 +5,7 @@ import React from 'react'
 const EventsList=(props)=> {
     return (
         <div>
-            <h2>{props.eventType} Events List</h2>
+            <h2>{props.eventType} List</h2>
         </div>
     )
 }
