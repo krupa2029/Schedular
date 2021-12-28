@@ -3,12 +3,13 @@ import { EventContentLayout } from "../Layouts/EventContentLayout";
 
 //Component will be rendered when "upcomingevents" Button got clicked... 
 
-const UpcomingEvents = () => {
+const UpcomingEvents = (props) => {
   const eventType = "Upcoming Events";
+  console.log(props.loadedData);
   return (
     <div>
       {/* <p>UpcomingEvents</p> */}
-      <EventContentLayout eventType={eventType}/>
+      <EventContentLayout loadedData={props.loadedData} eventType={eventType}/>
     </div>
   );
 };

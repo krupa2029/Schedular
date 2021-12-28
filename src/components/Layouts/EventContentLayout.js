@@ -5,6 +5,8 @@ import classes from "../Styles/EventContentLayout.module.css";
 // Dynamic Layout for Event-Content
 
 export const EventContentLayout = (props) => {
+  console.log(props.loadedData);
+
   return (
     <div className={classes.container}>
       <div className={classes.title}>
@@ -22,7 +24,7 @@ export const EventContentLayout = (props) => {
         </div>
 
         <div className={classes.event_list}>
-          <EventsList eventType={props.eventType} />
+          <EventsList loadedData={props.loadedData} eventType={props.eventType} />
         </div>
       </div>
     </div>
