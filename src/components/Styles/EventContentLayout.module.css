@@ -30,6 +30,11 @@
   width: 40%;
   height: 65vh;
   padding: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.event_list::-webkit-scrollbar {
+  display: none;
 }
 .view_control{
     display: flex;
