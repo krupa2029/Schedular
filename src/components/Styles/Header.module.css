@@ -14,6 +14,7 @@ a {
   align-items: center;
   padding: 2rem 2rem;
   background-color: #242526;
+  
 }
 .hamburger {
   display: none;
@@ -56,10 +57,13 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
   .nav_menu {
     position: fixed;
     left: -100%;
-    top: 7rem;
+    top: 5rem;
     flex-direction: column;
     background-color: #3A3B3C;
     width: 100%;
@@ -68,13 +72,18 @@ a {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
+  .nav_logo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+  }
 
   .nav_menu.active {
     left: 0;
   }
 
   .nav_item {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
   }
 
   .hamburger {
