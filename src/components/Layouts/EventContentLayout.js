@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import EventsList from "./EventsList";
 import classes from "../Styles/EventContentLayout.module.css";
 import MapView from "../Map/MapView";
+// import Calendar from "../Calender/Calender";
+import CalendarView from "../Calender/Calender";
 
 // Dynamic Layout for Event-Content
 
 export const EventContentLayout = (props) => {
   const [eventView, setEventView] = useState("Map");
-  // let eventView = <MapView />;
 
   const mapViewHandler = () => {
     setEventView("Map");
@@ -27,11 +28,11 @@ export const EventContentLayout = (props) => {
       <div className={classes.content_container}>
         <div className={classes.viewcontainer}>
           <div className={classes.view_control}>
-          <button onClick={calenderViewHandler}>Calender</button>
+            <button onClick={calenderViewHandler}>Calender</button>
             <button onClick={mapViewHandler}>MapView</button>
           </div>
           <div className={classes.view_content}>
-            {eventView === "Map" ? <MapView /> : `Calender`}
+            {eventView === "Map" ? <MapView /> : <CalendarView eventsData={props.loadedData} />}
           </div>
         </div>
 
