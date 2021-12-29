@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 5rem 11rem;
+  margin: 3rem 11rem;
 }
 
 .title {
@@ -15,20 +15,21 @@
   border: 2px dotted;
   border-color: white;
   padding: 0.5rem 0.5rem;
+  overflow: hidden;
 }
-.mapcontainer {
+.viewcontainer {
   border: 2px solid;
   border-color: white;
-  width: 60%;
-  height: 65vh;
+  width: 65%;
+  height: 68vh;
   margin-right: 1rem;
 }
 
 .event_list {
   border: 2px solid;
   border-color: white;
-  width: 40%;
-  height: 65vh;
+  width: 35%;
+  height: 68vh;
   padding: 0.5rem;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -36,19 +37,19 @@
 .event_list::-webkit-scrollbar {
   display: none;
 }
-.view_control{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    border: 2px solid;
-    border-color: white;
-    padding: 0.5rem;
+.view_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  border: 2px solid;
+  border-color: white;
+  padding: 0.5rem;
 }
-.view_content{
-    border: 2px solid;
-    border-color: white;
-    padding: 0.5rem;
-    margin: 0.5rem;
+.view_content {
+  border: 2px solid;
+  border-color: white;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -58,16 +59,14 @@
   .content_container {
     flex-direction: column;
   }
-  .mapcontainer {
+  .viewcontainer {
     width: 100%;
-    height: 40vh;
+    height: 100%;
     margin-bottom: 1rem;
   }
 
   .event_list {
     width: 100%;
-    height: 40vh;
+    height: 100%;
   }
-
-  
 }
