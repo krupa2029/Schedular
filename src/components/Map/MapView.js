@@ -20,7 +20,7 @@ const MapView = () => {
                   key={geo.rsmKey}
                   geography={geo}
                   strokeWidth={1}
-                  stroke="#265985"
+                  stroke="#01baef"
                   fill="#fff"
                 />
               ))
