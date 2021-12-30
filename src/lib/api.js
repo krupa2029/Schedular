@@ -34,6 +34,7 @@ export async function getEventsData() {
       title: data.title.rendered,
       venue: data["Location"],
       coordinates: coordinates,
+      link: data.link,
       start: start,
       end: end,
     };

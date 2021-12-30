@@ -10,9 +10,21 @@ const EventsList = (props) => {
   if (props.loadedData !== null) {
     listItem = props.loadedData.map((eventData) => (
       <div className={classes.event_Item} key={eventData.key}>
-        <h3>{eventData.title}</h3>
-        <p>{eventData.venue}</p>
-        <p>{`${eventData.start.toDateString()} - ${eventData.end.toDateString()}`}</p>
+        <div>
+          <h3>{eventData.title}</h3>
+          <p>{eventData.venue}</p>
+          <p>{`${eventData.start.toDateString()} - ${eventData.end.toDateString()}`}</p>
+        </div>
+        <div className={classes.link}>
+          <a
+            className="btn"
+            href={`${eventData.link}`}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Visit Site
+          </a>
+        </div>
       </div>
     ));
   }

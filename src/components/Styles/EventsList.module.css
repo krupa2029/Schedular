@@ -1,8 +1,26 @@
 .event_Item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border: 2px solid;
   border-color: #3a3b3c;
   margin: 0.5rem;
   border-radius: 0.5rem;
   padding: 1rem;
   background-color: #18191a;
+}
+
+.link{
+    margin-top: 1rem;
+    display: flex;
+}
+
+@media only screen and (max-width: 400px) {
+  .event_Item{
+    flex-direction: column;
+  }
+  .link{
+    margin-top: 0rem;
+    justify-content: right;
+  }
 }
