@@ -30,7 +30,6 @@ const MapView = (props) => {
         </Geographies>
         {/* </ZoomableGroup> */}
         {props.eventsData.map(({ key, title, coordinates }) => {
-          //console.log(name);
           return (
             <Marker key={key} coordinates={coordinates}>
               <circle

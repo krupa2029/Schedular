@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   height: 58vh;
-  /* background-color: #3A3B3C; */
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
 }

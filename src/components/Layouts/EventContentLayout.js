@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import EventsList from "./EventsList";
 import classes from "../Styles/EventContentLayout.module.css";
 import MapView from "../Map/MapView";
-// import Calendar from "../Calender/Calender";
 import CalendarView from "../Calender/Calender";
 
 // Dynamic Layout for Event-Content
