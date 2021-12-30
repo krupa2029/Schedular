@@ -4,6 +4,7 @@ import UpcomingEvents from "./components/Events/UpcomingEvents";
 import PastEvents from "./components/Events/PastEvents";
 import { getEventsData } from "./lib/api";
 import useHttp from "./hooks/use-http";
+import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 
 const App = () => {
   const [currentEventType, setCurrentEventType] = useState("past");
@@ -28,8 +29,15 @@ const App = () => {
 
   let content;
 
+  if (status === "pending") {
+    return (content = (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
+    ));
+  }
   if (error) {
-    return (content = <p>{error}</p>);
+    return (content = <p className="centered">{error}</p>);
   }
   if (status === "completed" && loadedData && loadedData !== null) {
     console.log(loadedData);
