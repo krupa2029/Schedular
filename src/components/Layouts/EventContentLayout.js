@@ -32,7 +32,7 @@ export const EventContentLayout = (props) => {
             <button className={`btn ${eventView==='calender' ? 'btn-active': ''}`} onClick={calenderViewHandler}>Calender View</button>
           </div>
           <div className={classes.view_content}>
-            {eventView === "Map" ? <MapView /> : <CalendarView eventsData={props.loadedData} />}
+            {eventView === "Map" ? <MapView eventsData={props.loadedData} /> : <CalendarView eventsData={props.loadedData} />}
           </div>
         </div>
 

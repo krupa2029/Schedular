@@ -17,15 +17,23 @@ export async function getEventsData() {
     const end = new Date(0);
     end.setUTCSeconds(EndutcSeconds);
 
+    let coordinates = [
+      data._host_coordinates.longitude,
+      data._host_coordinates.latitude,
+    ];
+    if (data._host_coordinates === "") {
+      coordinates = [
+        data._venue_coordinates.longitude,
+        data._venue_coordinates.latitude,
+      ];
+    }
+
     return {
       key: data.id,
       eventId: data.id,
       title: data.title.rendered,
-      venue: data["Venue Name"],
-      coordinates: [
-        data._host_coordinates.longitude,
-        data._host_coordinates.latitude,
-      ],
+      venue: data["Location"],
+      coordinates: coordinates,
       start: start,
       end: end,
     };

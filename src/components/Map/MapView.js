@@ -4,30 +4,47 @@ import {
   Geographies,
   Geography,
   ZoomableGroup,
+  Marker,
 } from "react-simple-maps";
+import ReactTooltip from 'react-tooltip';
 import topojson from "./world-110m.json";
 import classes from "../Styles/MapView.module.css";
 
-const MapView = () => {
+const MapView = (props) => {
   return (
     <div className={classes.map_container}>
       <ComposableMap width={800} height={560}>
-        <ZoomableGroup zoom={1}>
-          <Geographies geography={topojson}>
-            {({ geographies }) =>
-              geographies.map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  strokeWidth={1}
-                  stroke="#01baef"
-                  fill="#fff"
-                />
-              ))
-            }
-          </Geographies>
-        </ZoomableGroup>
+        {/* <ZoomableGroup zoom={1}> */}
+        <Geographies geography={topojson}>
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                strokeWidth={1}
+                stroke="#01baef"
+                fill="#fff"
+              />
+            ))
+          }
+        </Geographies>
+        {/* </ZoomableGroup> */}
+        {props.eventsData.map(({ key, title, coordinates }) => {
+          //console.log(name);
+          return (
+            <Marker key={key} coordinates={coordinates}>
+              <circle
+                r={9}
+                fill="red"
+                stroke="#fff"
+                strokeWidth={2}
+                data-tip={title}
+              />
+            </Marker>
+          );
+        })}
       </ComposableMap>
+      <ReactTooltip backgroundColor="#3A3B3C"/>
     </div>
   );
 };

@@ -24,6 +24,7 @@
     "react-big-calendar": "^0.38.2",
     "react-dom": "^17.0.2",
     "react-simple-maps": "^2.3.0",
+    "react-tooltip": "^4.2.21",
     "regenerator-runtime": "^0.13.9",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",

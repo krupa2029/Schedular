@@ -6,7 +6,7 @@ import { getEventsData } from "./lib/api";
 import useHttp from "./hooks/use-http";
 
 const App = () => {
-  const [currentEventType, setCurrentEventType] = useState("upcoming");
+  const [currentEventType, setCurrentEventType] = useState("past");
 
   const {
     sendRequest,
