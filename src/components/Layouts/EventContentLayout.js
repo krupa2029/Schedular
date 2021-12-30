@@ -28,8 +28,8 @@ export const EventContentLayout = (props) => {
       <div className={classes.content_container}>
         <div className={classes.viewcontainer}>
           <div className={classes.view_control}>
-            <button onClick={calenderViewHandler}>Calender</button>
-            <button onClick={mapViewHandler}>MapView</button>
+            <button className={`btn ${eventView==='Map' ? 'btn-active': ''}`} onClick={mapViewHandler}>Map View</button>
+            <button className={`btn ${eventView==='calender' ? 'btn-active': ''}`} onClick={calenderViewHandler}>Calender View</button>
           </div>
           <div className={classes.view_content}>
             {eventView === "Map" ? <MapView /> : <CalendarView eventsData={props.loadedData} />}

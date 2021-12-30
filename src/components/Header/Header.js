@@ -3,6 +3,8 @@ import classes from "../Styles/Header.module.css";
 
 const Header = (props) => {
   const [humburgerIsActive, setHumburgerIsActive] = useState(false);
+  const [currentEventType, setCurrentEventType] = useState("upcoming");
+
   const humburgerHandler = () => {
     if (humburgerIsActive) {
       setHumburgerIsActive(false);
@@ -11,10 +13,12 @@ const Header = (props) => {
     }
   };
   const pastEventHandler = () => {
+    setCurrentEventType('past');
     setHumburgerIsActive(false);
     props.eventType("past");
   };
   const upcommingEventHandler = () => {
+    setCurrentEventType('upcoming');
     setHumburgerIsActive(false);
     props.eventType("upcoming");
   };
@@ -27,12 +31,12 @@ const Header = (props) => {
 
         <ul className={`${classes.nav_menu} ${humburgerIsActive ? `${classes.active}` : ""}`}>
           <li className={classes.nav_item}>
-            <a className={classes.nav_link} onClick={pastEventHandler}>
+            <a className={ `${classes.nav_link} ${currentEventType==='past' ? 'btn-active' : ""}`} onClick={pastEventHandler}>
               Past Event
             </a>
           </li>
           <li className={classes.nav_item}>
-            <a className={classes.nav_link} onClick={upcommingEventHandler}>
+            <a className={ `${classes.nav_link} ${currentEventType==='upcoming' ? 'btn-active' : ""}`} onClick={upcommingEventHandler}>
               Upcoming Event
             </a>
           </li>
