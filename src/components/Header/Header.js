@@ -3,7 +3,7 @@ import classes from "../Styles/Header.module.css";
 
 const Header = (props) => {
   const [humburgerIsActive, setHumburgerIsActive] = useState(false);
-  const [currentEventType, setCurrentEventType] = useState("upcoming");
+  const [currentEventType, setCurrentEventType] = useState("past");
 
   const humburgerHandler = () => {
     if (humburgerIsActive) {

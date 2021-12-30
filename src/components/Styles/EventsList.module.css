@@ -1,13 +1,8 @@
-.list_Container{
-    /* border: 2px solid;
-    border-color: white; */
-    /* padding: 0.5rem; */
-    margin-top: 1rem;
-}
-.event_Item{
-    border: 2px solid;
-    border-color: #3A3B3C;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+.event_Item {
+  border: 2px solid;
+  border-color: #3a3b3c;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #18191a;
 }

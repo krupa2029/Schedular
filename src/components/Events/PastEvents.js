@@ -5,7 +5,7 @@ import { EventContentLayout } from "../Layouts/EventContentLayout";
 
 const PastEvents = (props) => {
   // console.log(props.loadedData);
-  const eventType = "Past Events";
+  const eventType = "Past WordCamps";
   const allEvents = props.loadedData;
   const pastEvents = allEvents.filter(
     (eventData) => Date.now() > eventData.end

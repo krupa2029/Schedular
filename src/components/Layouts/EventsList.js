@@ -7,7 +7,7 @@ const EventsList = (props) => {
     console.log(props.loadedData);
   return (
     <div>
-      <h2>{props.eventType} List</h2>
+      {/* <h2>{props.eventType} List</h2> */}
       <div className={classes.list_Container}>
         {props.loadedData.map((eventData) => (
           <div className={classes.event_Item} key={eventData.key}>

@@ -4,9 +4,6 @@ li {
 a {
   text-decoration: none;
 }
-/* .header {
-  border-bottom: 1px solid #e2e8f0;
-} */
 
 .navbar {
   display: flex;
@@ -36,11 +33,11 @@ a {
 }
 
 .nav_item {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .nav_link {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #f4f4f5;
   background-color: none;

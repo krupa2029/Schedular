@@ -23,7 +23,7 @@ export const EventContentLayout = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes.title}>
-        <h1>{props.eventType}</h1>
+        <p>{props.eventType}</p>
       </div>
       <div className={classes.content_container}>
         <div className={classes.viewcontainer}>

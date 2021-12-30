@@ -16,7 +16,12 @@ const CalendarView = (props) => {
         events={props.eventsData}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 410 , backgroundColor:"white", color:"black", padding:"0.5rem" }}
+        style={{
+          height: 425,
+          backgroundColor: "white",
+          color: "black",
+          padding: "1rem",
+        }}
       />
     </div>
   );
