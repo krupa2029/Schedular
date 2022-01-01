@@ -10,17 +10,20 @@
   background-color: #18191a;
 }
 
-.link{
-    margin-top: 1rem;
-    display: flex;
+.link {
+  margin-top: 1rem;
+  display: flex;
 }
 
 @media only screen and (max-width: 400px) {
-  .event_Item{
+
+  .event_Item {
     flex-direction: column;
   }
-  .link{
+
+  .link {
     margin-top: 0rem;
     justify-content: right;
   }
+  
 }

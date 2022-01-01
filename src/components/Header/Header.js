@@ -12,16 +12,19 @@ const Header = (props) => {
       setHumburgerIsActive(true);
     }
   };
+
   const pastEventHandler = () => {
     setCurrentEventType('past');
     setHumburgerIsActive(false);
     props.eventType('past');
   };
+
   const upcommingEventHandler = () => {
     setCurrentEventType('upcoming');
     setHumburgerIsActive(false);
     props.eventType('upcoming');
   };
+
   return (
     <header className={classes.header}>
       <nav className={classes.navbar}>
@@ -55,6 +58,7 @@ const Header = (props) => {
             </a>
           </li>
         </ul>
+
         <div
           className={`${classes.hamburger} ${
             humburgerIsActive ? `${classes.active}` : ''

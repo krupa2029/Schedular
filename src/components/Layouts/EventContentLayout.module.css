@@ -17,7 +17,8 @@
   padding: 0.5rem 0.5rem;
   overflow: hidden;
 }
-.viewcontainer {
+
+.view_container {
   width: 65%;
   height: 68vh;
   margin-right: 1rem;
@@ -25,7 +26,7 @@
 
 .event_list {
   border: 2px solid;
-  border-color: #3A3B3C;
+  border-color: #3a3b3c;
   width: 35%;
   height: 59vh;
   margin-top: 6rem;
@@ -34,9 +35,11 @@
   overflow-y: scroll;
   background-color: #242526;
 }
+
 .event_list::-webkit-scrollbar {
   display: none;
 }
+
 .view_control {
   display: flex;
   flex-direction: row;
@@ -44,27 +47,33 @@
   padding: 0.5rem;
   margin: 0.5rem 0rem;
 }
+
 .view_content {
   border: 2px solid;
-  border-color: #3A3B3C;
+  border-color: #3a3b3c;
   margin: 0.5rem;
 }
 
 @media only screen and (max-width: 1024px) {
+
   .container {
     margin: 2rem 2rem;
   }
+
   .content_container {
     flex-direction: column;
   }
-  .viewcontainer {
+
+  .view_container {
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
   }
+
   .view_control {
     justify-content: center;
   }
+
   .event_list {
     margin-top: 0;
     width: 100%;

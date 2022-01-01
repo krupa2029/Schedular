@@ -9,6 +9,7 @@ export async function getEventsData() {
   }
 
   const eventDetails = responseData.map((data) => {
+    
     const startEventEpoch = data['Start Date (YYYY-mm-dd)'];
     const startEventDate = new Date(0);
     startEventDate.setUTCSeconds(startEventEpoch);
