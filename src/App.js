@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Header from "./components/Header/Header";
-import UpcomingEvents from "./components/Events/UpcomingEvents";
-import PastEvents from "./components/Events/PastEvents";
-import { getEventsData } from "./lib/api";
-import useHttp from "./hooks/use-http";
-import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
+import React, { useEffect, useState } from 'react';
+import Header from './components/Header/Header';
+import UpcomingEvents from './components/Events/UpcomingEvents';
+import PastEvents from './components/Events/PastEvents';
+import { getEventsData } from './lib/api';
+import useHttp from './hooks/use-http';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 
 const App = () => {
-  const [currentEventType, setCurrentEventType] = useState("past");
+  const [currentEventType, setCurrentEventType] = useState('past');
 
   const {
     sendRequest,
@@ -29,7 +29,7 @@ const App = () => {
 
   let content;
 
-  if (status === "pending") {
+  if (status === 'pending') {
     return (content = (
       <div className="centered">
         <LoadingSpinner />
@@ -39,13 +39,15 @@ const App = () => {
   if (error) {
     return (content = <p className="centered">{error}</p>);
   }
-  if (status === "completed" && loadedData && loadedData !== null) {
-    console.log(loadedData);
+  if (status === 'completed' && !loadedData) {
+    return (content = <p className="centered">No data Found!</p>);
+  }
 
-    if (currentEventType === "upcoming") {
+  if (status === 'completed' && loadedData.length) {
+    if (currentEventType === 'upcoming') {
       content = <UpcomingEvents loadedData={loadedData} />;
     }
-    if (currentEventType === "past") {
+    if (currentEventType === 'past') {
       content = <PastEvents loadedData={loadedData} />;
     }
   }
