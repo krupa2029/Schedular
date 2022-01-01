@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import EventsList from "./EventsList";
-import classes from "../Styles/EventContentLayout.module.css";
+import classes from "./EventContentLayout.module.css";
 import MapView from "../Map/MapView";
 import CalendarView from "../Calender/Calender";
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../Styles/EventsList.module.css';
+import classes from './EventsList.module.css';
 
 // Reusable List Component
 

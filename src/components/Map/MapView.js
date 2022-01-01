@@ -8,7 +8,7 @@ import {
 } from "react-simple-maps";
 import ReactTooltip from 'react-tooltip';
 import topojson from "./world-110m.json";
-import classes from "../Styles/MapView.module.css";
+import classes from "./MapView.module.css";
 
 const MapView = (props) => {
   return (
