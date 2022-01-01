@@ -1,10 +1,9 @@
-import React from "react";
-import classes from "../Styles/EventsList.module.css";
+import React from 'react';
+import classes from '../Styles/EventsList.module.css';
 
 // Reusable List Component
 
 const EventsList = (props) => {
-  // console.log(props.loadedData);
   let listItem = <h2>No Events Found!!</h2>;
 
   if (props.loadedData !== null) {
@@ -13,7 +12,7 @@ const EventsList = (props) => {
         <div>
           <h3>{eventData.title}</h3>
           <p>{eventData.venue}</p>
-          <p>{`${eventData.start.toDateString()} - ${eventData.end.toDateString()}`}</p>
+          <p>{`${eventData.startEventDate.toDateString()} - ${eventData.endEventDate.toDateString()}`}</p>
         </div>
         <div className={classes.link}>
           <a
@@ -31,7 +30,6 @@ const EventsList = (props) => {
 
   return (
     <div>
-      {/* <h2>{props.eventType} List</h2> */}
       <div className={classes.list_Container}>{listItem}</div>
     </div>
   );
