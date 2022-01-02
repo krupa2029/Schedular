@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EventsList component 1`] = `
+<div>
+  <div>
+    <div>
+      <div>
+        <h3>
+          WordCamp Genève 2022
+        </h3>
+        <p>
+          Genève, Suisse
+        </p>
+        <p>
+          Thu Jun 24 2021 - Sat Jun 26 2021
+        </p>
+      </div>
+      <div>
+        <a
+          className="btn"
+          href="https://central.wordcamp.org/wordcamps/wordcamp-geneve-suisse/"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Visit Site
+        </a>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h3>
+          WordCamp Genève 2022
+        </h3>
+        <p>
+          Genève, Suisse
+        </p>
+        <p>
+          Thu Jun 24 2021 - Sat Jun 26 2021
+        </p>
+      </div>
+      <div>
+        <a
+          className="btn"
+          href="https://central.wordcamp.org/wordcamps/wordcamp-geneve-suisse/"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Visit Site
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
