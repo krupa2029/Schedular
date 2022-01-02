@@ -9,9 +9,9 @@ const PastEvents = (props) => {
   const pastEvents = allEvents.filter(
     (eventData) => Date.now() > eventData.endEventDate
   );
-  
+
   return (
-    <div>
+    <div data-testid="pastEvents_content_layout">
       <EventContentLayout loadedData={pastEvents} eventType={eventType} />
     </div>
   );

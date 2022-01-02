@@ -10,9 +10,9 @@ const UpcomingEvents = (props) => {
   const upComingEvents = allEvents.filter(
     (eventData) => Date.now() < eventData.startEventDate
   );
-  
+
   return (
-    <div>
+    <div data-testid="upcomingEvents_content_layout">
       <EventContentLayout loadedData={upComingEvents} eventType={eventType} />
     </div>
   );
