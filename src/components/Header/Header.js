@@ -39,6 +39,7 @@ const Header = (props) => {
         >
           <li className={classes.nav_item}>
             <a
+              data-testid= 'past'
               className={`${classes.nav_link} ${
                 currentEventType === 'past' ? 'btn-active' : ''
               }`}
@@ -49,6 +50,7 @@ const Header = (props) => {
           </li>
           <li className={classes.nav_item}>
             <a
+              data-testid = 'upcoming'
               className={`${classes.nav_link} ${
                 currentEventType === 'upcoming' ? 'btn-active' : ''
               }`}
