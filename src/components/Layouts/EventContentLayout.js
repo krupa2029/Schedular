@@ -20,26 +20,29 @@ export const EventContentLayout = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes.title}>
-        <p>{props.eventType}</p>
+        <p data-testid="event_type">{props.eventType}</p>
       </div>
 
       <div className={classes.content_container}>
         <div className={classes.view_container}>
           <div className={classes.view_control}>
             <button
+              data-testid="view_control_button"
               className={`btn ${eventView === 'Map' ? 'btn-active' : ''}`}
               onClick={mapViewHandler}
             >
               Map View
             </button>
             <button
+              data-testid="view_control_button"
               className={`btn ${eventView === 'calender' ? 'btn-active' : ''}`}
               onClick={calenderViewHandler}
             >
               Calender View
             </button>
           </div>
-          <div className={classes.view_content}>
+
+          <div className={classes.view_content} data-testid="view_content">
             {eventView === 'Map' ? (
               <MapView eventsData={props.loadedData} />
             ) : (
@@ -48,13 +51,12 @@ export const EventContentLayout = (props) => {
           </div>
         </div>
 
-        <div className={classes.event_list}>
+        <div className={classes.event_list} data-testid="events_list">
           <EventsList
             loadedData={props.loadedData}
             eventType={props.eventType}
           />
         </div>
-
       </div>
     </div>
   );
