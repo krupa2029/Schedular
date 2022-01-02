@@ -11,9 +11,8 @@ import classes from './MapView.module.css';
 
 const MapView = (props) => {
   return (
-    <div className={classes.map_container}>
+    <div className={classes.map_container} data-testid="map_container">
       <ComposableMap width={800} height={560}>
-
         <Geographies geography={topojson}>
           {({ geographies }) =>
             geographies.map((geo) => (
@@ -28,22 +27,21 @@ const MapView = (props) => {
           }
         </Geographies>
 
-        {props.eventsData.map(({ key, title, coordinates }) => {
+        {props.eventsData.map((data) => {
           return (
-            <Marker key={key} coordinates={coordinates}>
+            <Marker key={data.key} coordinates={data.coordinates}>
               <circle
                 r={9}
                 fill="red"
                 stroke="#fff"
                 strokeWidth={2}
-                data-tip={title}
+                data-tip={data.title}
               />
             </Marker>
           );
         })}
-
       </ComposableMap>
-      
+
       <ReactTooltip backgroundColor="#3A3B3C" />
     </div>
   );
