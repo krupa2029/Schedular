@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import EventsList from './EventsList';
 import classes from './EventContentLayout.module.css';
 import MapView from '../Map/MapView';
-import CalendarView from '../Calender/Calender';
+import CalendarView from '../Calendar/CalendarView';
 
 // Dynamic Layout for Event-Content
 
@@ -13,8 +13,8 @@ export const EventContentLayout = (props) => {
     setEventView('Map');
   };
 
-  const calenderViewHandler = () => {
-    setEventView('calender');
+  const calendarViewHandler = () => {
+    setEventView('calendar');
   };
 
   return (
@@ -35,10 +35,10 @@ export const EventContentLayout = (props) => {
             </button>
             <button
               data-testid="view_control_button"
-              className={`btn ${eventView === 'calender' ? 'btn-active' : ''}`}
-              onClick={calenderViewHandler}
+              className={`btn ${eventView === 'calendar' ? 'btn-active' : ''}`}
+              onClick={calendarViewHandler}
             >
-              Calender View
+              Calendar View
             </button>
           </div>
 
