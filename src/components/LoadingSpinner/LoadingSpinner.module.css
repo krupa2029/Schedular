@@ -4,7 +4,7 @@
   height: 80px;
 }
 
-.spinner:after {
+.spinner::after {
   content: ' ';
   display: block;
   width: 64px;
