@@ -1,4 +1,4 @@
-export async function getEventsData() {
+export const getEventsData = async () => {
   const response = await fetch(
     'https://central.wordcamp.org/wp-json/wp/v2/wordcamps'
   );
@@ -9,7 +9,6 @@ export async function getEventsData() {
   }
 
   const eventDetails = responseData.map((data) => {
-    
     const startEventEpoch = data['Start Date (YYYY-mm-dd)'];
     const startEventDate = new Date(0);
     startEventDate.setUTCSeconds(startEventEpoch);
@@ -18,7 +17,7 @@ export async function getEventsData() {
     const endEventDate = new Date(0);
     endEventDate.setUTCSeconds(endEventEpoch);
 
-    let coordinates = [];
+    let coordinates = [0, 0];
 
     if (data?._host_coordinates === '') {
       coordinates = [
@@ -33,16 +32,22 @@ export async function getEventsData() {
     }
 
     return {
-      key: data?.id,
-      eventId: data?.id,
-      title: data?.title?.rendered,
-      venue: data?.Location,
+      key: data?.id ?? '',
+      eventId: data?.id ?? '',
+      title: data?.title?.rendered ?? '',
+      venue: data?.Location ?? '',
       coordinates: coordinates,
-      link: data?.link,
+      link: data?.link ?? '',
       startEventDate: startEventDate,
       endEventDate: endEventDate,
     };
   });
 
   return eventDetails;
-}
+};
+
+const Functions = {
+  getEventsData,
+};
+
+export default Functions;
