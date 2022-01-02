@@ -3,7 +3,10 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: ["regenerator-runtime/runtime.js","./src/index.js"],
+  entry: [
+    ['babel-polyfill',"./src/index.js"],
+    ["regenerator-runtime/runtime.js","./src/index.js"]
+  ],
   output: {
     filename: "bundle.[hash].js",
     path: path.resolve(__dirname, "dist"),
