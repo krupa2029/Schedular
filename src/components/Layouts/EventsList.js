@@ -1,15 +1,18 @@
 import React from 'react';
 import classes from './EventsList.module.css';
 
-// Reusable List Component
+// Reusable List Component...
 
 const EventsList = (props) => {
+
   let listItem = <h2>No Events Found!!</h2>;
 
   if (props.loadedData !== null) {
+
+    // map eventdData into listItem...
+
     listItem = props.loadedData.map((eventData) => (
       <div className={classes.event_Item} key={eventData.key}>
-
         <div>
           <h3>{eventData.title}</h3>
           <p>{eventData.venue}</p>
@@ -26,7 +29,6 @@ const EventsList = (props) => {
             Visit Site
           </a>
         </div>
-        
       </div>
     ));
   }

@@ -9,6 +9,8 @@ import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 const App = () => {
   const [currentEventType, setCurrentEventType] = useState('past');
 
+  // Sending http request to the api using useHttp hook...
+
   const {
     sendRequest,
     status,
@@ -22,12 +24,14 @@ const App = () => {
       sendRequest();
     }
     return () => {
-      // cancel the subscription
+      // cancel the api subscription
       isApiSubscribed = false;
     };
   }, [sendRequest]);
 
   let content;
+
+  // display LoadingSpinner component when request status is 'pending'...
 
   if (status === 'pending') {
     return (content = (
@@ -36,6 +40,9 @@ const App = () => {
       </div>
     ));
   }
+
+  // display error message if request fails and get error...
+
   if (error) {
     return (content = (
       <p className="centered" data-testid="error">
@@ -44,6 +51,8 @@ const App = () => {
     ));
   }
 
+  // display ' No data Found!' when request status is 'completed' but loadedData is null...
+
   if (status === 'completed' && !loadedData) {
     return (content = (
       <p className="centered" data-testid="no_data">
@@ -51,6 +60,8 @@ const App = () => {
       </p>
     ));
   }
+
+  // when request status is 'completed' and loadedData is not null...
 
   if (status === 'completed' && loadedData.length) {
     if (currentEventType === 'upcoming') {
@@ -71,6 +82,8 @@ const App = () => {
     }
   }
 
+  // Handle Current Event Type...
+  
   const eventTypeHandler = (currentEvent) => {
     setCurrentEventType(currentEvent);
   };

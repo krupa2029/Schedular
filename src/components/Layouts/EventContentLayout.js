@@ -9,10 +9,12 @@ import CalendarView from '../Calendar/CalendarView';
 export const EventContentLayout = (props) => {
   const [eventView, setEventView] = useState('Map');
 
+  // Handle click event on 'Map View' button...
   const mapViewHandler = () => {
     setEventView('Map');
   };
 
+  // Handle click event on 'Calendar View' button...
   const calendarViewHandler = () => {
     setEventView('calendar');
   };

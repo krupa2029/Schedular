@@ -10,6 +10,8 @@ const PastEvents = (props) => {
     (eventData) => Date.now() > eventData.endEventDate
   );
 
+  // Return Content Layout with past events data
+
   return (
     <div data-testid="pastEvents_content_layout">
       <EventContentLayout loadedData={pastEvents} eventType={eventType} />

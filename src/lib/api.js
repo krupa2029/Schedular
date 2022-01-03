@@ -4,11 +4,18 @@ export const getEventsData = async () => {
   );
   const responseData = await response.json();
 
+  // Throw error if response will be not as expected...
+
   if (!response.ok) {
     throw new Error(responseData.message || 'Could not fetch data.');
   }
 
+  // map responseData into eventDetails...
+
   const eventDetails = responseData.map((data) => {
+    
+    // convert UTCSeconds into local date time
+
     const startEventEpoch = data['Start Date (YYYY-mm-dd)'];
     const startEventDate = new Date(0);
     startEventDate.setUTCSeconds(startEventEpoch);

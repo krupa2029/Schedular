@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import classes from './Header.module.css';
 
+// Main Header Component
+
 const Header = (props) => {
   const [humburgerIsActive, setHumburgerIsActive] = useState(false);
   const [currentEventType, setCurrentEventType] = useState('past');
 
+  // Handle humburger visibility
   const humburgerHandler = () => {
     if (humburgerIsActive) {
       setHumburgerIsActive(false);
@@ -13,12 +16,14 @@ const Header = (props) => {
     }
   };
 
+  // Handle click event on "Past Event" link
   const pastEventHandler = () => {
     setCurrentEventType('past');
     setHumburgerIsActive(false);
     props.eventType('past');
   };
 
+  // Handle click event on "Upcoming Event" link 
   const upcommingEventHandler = () => {
     setCurrentEventType('upcoming');
     setHumburgerIsActive(false);

@@ -11,6 +11,8 @@ const UpcomingEvents = (props) => {
     (eventData) => Date.now() < eventData.startEventDate
   );
 
+  // Return Content Layout with upcoming events data
+
   return (
     <div data-testid="upcomingEvents_content_layout">
       <EventContentLayout loadedData={upComingEvents} eventType={eventType} />

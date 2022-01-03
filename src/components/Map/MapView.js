@@ -9,6 +9,8 @@ import ReactTooltip from 'react-tooltip';
 import topojson from './world-110m.json';
 import classes from './MapView.module.css';
 
+// Render Map with markers and tooltip of events
+
 const MapView = (props) => {
   return (
     <div className={classes.map_container} data-testid="map_container">
