@@ -9,9 +9,8 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 const localizer = momentLocalizer(moment);
 
 const CalendarView = (props) => {
-  
   return (
-    <div>
+    <div data-testid="calendar_container">
       <Calendar
         localizer={localizer}
         events={props.eventsData}
