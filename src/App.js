@@ -37,19 +37,37 @@ const App = () => {
     ));
   }
   if (error) {
-    return (content = <p className="centered" data-testid="error">{error}</p>);
+    return (content = (
+      <p className="centered" data-testid="error">
+        {error}
+      </p>
+    ));
   }
-  
+
   if (status === 'completed' && !loadedData) {
-    return (content = <p className="centered" data-testid="no_data">No data Found!</p>);
+    return (content = (
+      <p className="centered" data-testid="no_data">
+        No data Found!
+      </p>
+    ));
   }
 
   if (status === 'completed' && loadedData.length) {
     if (currentEventType === 'upcoming') {
-      content = <div data-testid="loadedevents"> <UpcomingEvents loadedData={loadedData}/></div>;
+      content = (
+        <div data-testid="upcomingEvent_component">
+          {' '}
+          <UpcomingEvents loadedData={loadedData} />
+        </div>
+      );
     }
     if (currentEventType === 'past') {
-      content = <PastEvents loadedData={loadedData} />;
+      content = (
+        <div data-testid="pastEvent_component">
+          {' '}
+          <PastEvents loadedData={loadedData} />
+        </div>
+      );
     }
   }
 
