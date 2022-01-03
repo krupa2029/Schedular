@@ -3,6 +3,14 @@ React App for WordCamp Schedule Viewer. The application is built using HTML, CSS
  
 * Visit: **[Live Demo](https://wordcamp-ca343.web.app)**
 
+### Features:
+1. Display Past Events and Upcoming Events Seperately
+2. Display events in Map View and Calender View
+3. Display List of Events
+4. Provide 'Visit Site' button : Can visit the Event site to know more about it
+5. Show tooltips on marker in Map View
+6. Responsive Design
+
 ## API Endpoint used to fetch data
 * https://central.wordcamp.org/wp-json/wp/v2/wordcamps
 
@@ -12,10 +20,11 @@ React App for WordCamp Schedule Viewer. The application is built using HTML, CSS
    $ npm install
    $ npm run start
    ```
-   
+
 ## The main components :
 
 - `App` - The primary component that manages all underlying components. Send http request to the API endpoint and render content according to api response.
+
 - `Header` - A component contains  application title and searchbar. 
 - `PastEvents` - Accepts fetched event data as a props and filter 'Past Events' from it. And passes filtered events to the `EventContentLayout` component
 - `UpcomingEvents` -  Accepts fetched event data as a props and filter 'Upcoming Events' from it. And passes filtered events to the `EventContentLayout` component
