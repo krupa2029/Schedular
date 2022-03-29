@@ -1,5 +1,5 @@
 # WordCamp
-React App for WordCamp Schedule Viewer. The application is built using HTML, CSS and React.js.
+React App for Schedule Viewer. The application is built using HTML, CSS and React.js.
  
 * Visit: **[Live Demo](https://wordcamp-ca343.web.app)**
 
